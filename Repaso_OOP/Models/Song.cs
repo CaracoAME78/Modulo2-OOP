@@ -10,18 +10,18 @@ namespace Repaso_OOP.Clases
     internal class Song
     {
         private string _name; // access modifier
-        public string Name
+        public string NamePublic
         {
             get => _name;
             set => _name = value;
         }
-        private string artist;
-        private string genre;
-        private string albumName;
-        private int durationSeconds;
+        public string artist;
+        public string genre;
+        public string albumName;
+        public int durationSeconds;
         public Song(string name, string artist, string genre, string albumName, int durationSeconds)
         {
-            this.name = name;
+            this._name = name;
             this.artist = artist;
             this.genre = genre;
             this.albumName = albumName;
@@ -30,7 +30,7 @@ namespace Repaso_OOP.Clases
 
         public Song(string name, string artist, string albumName, int durationSeconds)
         {
-            this.name = name;
+            this._name = name;
             this.artist = artist;
             this.albumName = albumName;
             this.durationSeconds = durationSeconds;
@@ -39,7 +39,7 @@ namespace Repaso_OOP.Clases
 
         public string mostrarNombreCancion(string nombre)
         {
-            return name + "" + nombre;
+            return _name + "" + nombre;
 
         }
 
